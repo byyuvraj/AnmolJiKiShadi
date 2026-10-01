@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-
   const bgAudio = document.getElementById('bg-audio');
   
   const playAudio = async () => {
@@ -42,6 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Start audio automatically since this was a user interaction!
       playAudio();
+
+      // Trigger the bus animation reliably 4 seconds after opening
+      const busImg = document.getElementById('bus-img');
+      if (busImg) {
+        setTimeout(() => {
+          busImg.classList.add('drive-in');
+        }, 4000);
+      }
     }, 1000); // Wait for the CSS fade-out transition (1s)
   });
 
