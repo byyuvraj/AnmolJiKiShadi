@@ -105,8 +105,8 @@ img {
   width: min(35vw, 150px);
   height: auto;
   pointer-events: none;
-  margin-bottom: min(4vw, 20px);
-  transform: translateY(-7vh);
+  margin-bottom: min(3vw, 15px);
+  transform: translateY(-5vh);
 }
 
 .hindi-mantra {
@@ -123,7 +123,7 @@ img {
   color: var(--color-secondary);
   line-height: 1.5;
   letter-spacing: 0.5px;
-  margin-bottom: min(4vw, 20px);
+  margin-bottom: min(7vw, 35px);
 }
 
 .invite-line {
@@ -132,16 +132,16 @@ img {
   color: var(--color-secondary);
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin-bottom: min(3vw, 15px);
+  margin-bottom: min(5vw, 25px);
 }
 
 .person-name {
   font-family: var(--font-script);
-  font-size: min(12vw, 55px);
+  font-size: min(9vw, 38px);
   color: var(--color-highlight);
   font-weight: 400;
   line-height: 1;
-  margin-bottom: min(1.5vw, 6px);
+  margin-bottom: min(3vw, 15px);
 }
 
 .son-daughter-text {
@@ -149,16 +149,16 @@ img {
   font-size: min(2.5vw, 11px);
   color: var(--color-secondary);
   letter-spacing: 0.5px;
-  margin-bottom: min(3vw, 15px);
+  margin-bottom: min(4vw, 20px);
 }
 
 .and-text {
   font-family: var(--font-secondary);
   font-size: min(4vw, 18px);
   color: var(--color-secondary);
-  font-weight: 600;
+  font-weight: 400;
   font-style: italic;
-  margin-bottom: min(2vw, 10px);
+  margin-bottom: min(4vw, 20px);
 }
 
 .date-block {
@@ -166,12 +166,12 @@ img {
   align-items: center;
   justify-content: center;
   gap: min(2vw, 10px);
-  margin-top: min(2vw, 10px);
+  margin-top: min(7vw, 35px);
 }
 
 .date-month, .date-year {
   font-family: var(--font-secondary);
-  font-size: min(3.5vw, 15px);
+  font-size: min(4vw, 18px);
   color: var(--color-secondary);
 }
 
@@ -183,7 +183,7 @@ img {
 
 .date-days {
   font-family: var(--font-secondary);
-  font-size: min(5vw, 22px);
+  font-size: min(4vw, 18px);
   color: var(--color-highlight);
   font-weight: 600;
 }
@@ -197,7 +197,7 @@ img {
   border: none;
   border-top: 1px solid var(--color-secondary);
   opacity: 0.4;
-  margin: min(2vw, 10px) 0;
+  margin: min(4vw, 20px) 0;
 }
 
 .venue-text {
@@ -206,15 +206,10 @@ img {
   color: var(--color-highlight);
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin-bottom: min(4vw, 20px);
+  margin-bottom: min(6vw, 30px);
 }
 
-.formal-text {
-  font-family: var(--font-secondary);
-  font-size: min(2vw, 9px);
-  color: var(--color-secondary);
-  letter-spacing: 0.5px;
-}
+
 
 .welcome-text {
   font-family: var(--font-secondary);
