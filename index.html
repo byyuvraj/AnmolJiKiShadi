@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Wedding Invitation</title>
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourweddingurl.com/">
+  <meta property="og:title" content="You're Invited!">
+  <meta property="og:description" content="Join us in celebrating our wedding.">
+  <meta property="og:image" content="https://yourweddingurl.com/assets/bg%201.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://yourweddingurl.com/">
+  <meta property="twitter:title" content="You're Invited!">
+  <meta property="twitter:description" content="Join us in celebrating our wedding.">
+  <meta property="twitter:image" content="https://yourweddingurl.com/assets/bg%201.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amita:wght@400;700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container landing-page" id="landing-page">
+    <div class="landing-cover">
+      <img src="/assets/cover.png" alt="Cover Page" class="landing-img" />
+      
+      <div class="landing-top-content">
+        <img src="/assets/as%20logo.png" alt="AS Logo" class="as-logo" />
+        <h1 class="couple-names">Anmol &amp; Shreya</h1>
+      </div>
+
+      <div class="landing-personalized" id="landing-personalized">
+        <h2 class="welcome-text">Welcome,</h2>
+        <h1 class="guest-name" id="cover-guest-name"></h1>
+      </div>
+
+      <div class="landing-content">
+        <button id="open-btn" class="open-btn">Open Invitation</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-container main-invitation" id="main-invitation" style="display: none;">
+    <div class="cover-wrapper">
+      <!-- User will replace this with their cover.png -->
+      <img src="/assets/bg 1.png" alt="Cover Background" class="cover-bg" id="cover-image" />
+      
+      <div class="cover-box-content">
+        <img src="/assets/ganesha.png" alt="Lord Ganesha" class="ganesha-logo" />
+
+        <p class="parents-text">
+          LATE RAJENDRA MISHRA AND LATE SUMITRA DEVI<br>
+          ALONG WITH LATE LALAN DUBEY AND BINDA DUBEY
+        </p>
+
+        <p class="invite-line">
+          WE CORDIALLY INVITE YOU FOR THE WEDDING OF
+        </p>
+
+        <h1 class="person-name">Anmol Mishra</h1>
+        
+        <p class="son-daughter-text">S/O POONAM AND DURGESH MISHRA</p>
+        
+        <p class="and-text">and</p>
+
+        <h1 class="person-name">Shreya Dubey</h1>
+
+        <p class="son-daughter-text">D/O ANJU AND RAMGOPAL DUBEY</p>
+
+        <div class="date-block">
+          <span class="date-month">NOV</span>
+          <span class="date-divider">|</span>
+          <span class="date-days">25<sup>th</sup>-26<sup>th</sup></span>
+          <span class="date-divider">|</span>
+          <span class="date-year">2026</span>
+        </div>
+        <hr class="date-line">
+
+        <h2 class="venue-text">SHIVGARH COUNTRY CLUB, LUCKNOW</h2>
+
+        <p class="formal-text">FORMAL INVITATION TO FOLLOW</p>
+      </div>
+    </div>
+    
+
+  </div>
+
+
+  <!-- User will replace this with their bg-audio.mp3 -->
+  <audio id="bg-audio" loop>
+    <source src="/assets/audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

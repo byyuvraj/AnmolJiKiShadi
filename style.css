@@ -1,0 +1,356 @@
+@font-face {
+  font-family: 'Diplomatic';
+  src: url('/assets/diplomatic.woff') format('woff'),
+       url('/assets/diplomatic.ttf') format('truetype'),
+       url('/assets/Diplomatic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --max-width: 480px;
+  --font-primary: 'Cormorant', serif;
+  --font-secondary: 'Libre Baskerville', serif;
+  --font-script: 'Diplomatic', 'Alex Brush', cursive;
+  --font-hindi: 'Amita', serif;
+  
+  --color-secondary: #4f6437;
+  --color-text: var(--color-secondary);
+  --color-highlight: #d44364;
+  --color-bg: #f9f6f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  
+  /* Elder-Friendly UX Protections */
+  user-select: none; 
+  -webkit-touch-callout: none;
+  
+  overflow-x: hidden;
+}
+
+/* Heavily blurred, darkened background */
+body::before {
+  content: "";
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-image: url('/assets/bg 1.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(min(4.16vw, 20px)) brightness(0.3);
+  z-index: -1;
+  pointer-events: none;
+}
+
+img {
+  pointer-events: none;
+  -webkit-user-drag: none;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.app-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  box-shadow: 0 0 min(4.16vw, 20px) rgba(0,0,0,0.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.cover-bg {
+  width: 100%;
+  /* Fallback min-height in case image is missing to preserve layout */
+  min-height: min(100vw, 480px); 
+}
+
+.cover-box-content {
+  position: absolute;
+  top: 7%; 
+  bottom: 7%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ganesha-logo {
+  width: min(35vw, 150px);
+  height: auto;
+  pointer-events: none;
+  margin-bottom: min(4vw, 20px);
+  transform: translateY(-7vh);
+}
+
+.hindi-mantra {
+  font-family: var(--font-hindi);
+  font-size: min(3vw, 14px);
+  color: var(--color-highlight);
+  line-height: 1.4;
+  margin-bottom: min(4vw, 15px);
+}
+
+.parents-text {
+  font-family: var(--font-secondary);
+  font-size: min(2.2vw, 10px);
+  color: var(--color-secondary);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin-bottom: min(4vw, 20px);
+}
+
+.invite-line {
+  font-family: var(--font-secondary);
+  font-size: min(2.8vw, 12px);
+  color: var(--color-secondary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: min(3vw, 15px);
+}
+
+.person-name {
+  font-family: var(--font-script);
+  font-size: min(12vw, 55px);
+  color: var(--color-highlight);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: min(1.5vw, 6px);
+}
+
+.son-daughter-text {
+  font-family: var(--font-secondary);
+  font-size: min(2.5vw, 11px);
+  color: var(--color-secondary);
+  letter-spacing: 0.5px;
+  margin-bottom: min(3vw, 15px);
+}
+
+.and-text {
+  font-family: var(--font-secondary);
+  font-size: min(4vw, 18px);
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: min(2vw, 10px);
+}
+
+.date-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: min(2vw, 10px);
+  margin-top: min(2vw, 10px);
+}
+
+.date-month, .date-year {
+  font-family: var(--font-secondary);
+  font-size: min(3.5vw, 15px);
+  color: var(--color-secondary);
+}
+
+.date-divider {
+  color: var(--color-highlight);
+  font-size: min(4vw, 18px);
+  opacity: 0.5;
+}
+
+.date-days {
+  font-family: var(--font-secondary);
+  font-size: min(5vw, 22px);
+  color: var(--color-highlight);
+  font-weight: 600;
+}
+
+.date-days sup {
+  font-size: min(2.5vw, 11px);
+}
+
+.date-line {
+  width: 50%;
+  border: none;
+  border-top: 1px solid var(--color-secondary);
+  opacity: 0.4;
+  margin: min(2vw, 10px) 0;
+}
+
+.venue-text {
+  font-family: var(--font-secondary);
+  font-size: min(3.2vw, 14px);
+  color: var(--color-highlight);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: min(4vw, 20px);
+}
+
+.formal-text {
+  font-family: var(--font-secondary);
+  font-size: min(2vw, 9px);
+  color: var(--color-secondary);
+  letter-spacing: 0.5px;
+}
+
+.welcome-text {
+  font-family: var(--font-secondary);
+  font-size: min(5vw, 24px);
+  font-weight: 500;
+  letter-spacing: min(0.4vw, 2px);
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.guest-name {
+  font-family: var(--font-script);
+  font-size: min(8vw, 38px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-highlight);
+}
+
+
+
+
+/* Landing Page */
+.landing-page {
+  z-index: 100;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.landing-cover {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 100vh;
+}
+
+.landing-img {
+  width: 100%;
+  object-fit: cover;
+  min-height: 100vh;
+}
+
+.landing-top-content {
+  position: absolute;
+  /* Adjust this percentage to place the logo and names perfectly inside the upper beige box */
+  top: 10%;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: min(2vw, 10px);
+}
+
+.as-logo {
+  width: min(35vw, 160px);
+  height: auto;
+  pointer-events: none;
+}
+
+.couple-names {
+  font-family: var(--font-script);
+  font-size: min(7vw, 32px);
+  color: var(--color-highlight);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+}
+
+.landing-personalized {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.landing-personalized .welcome-text {
+  position: absolute;
+  top: 49%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.landing-personalized .guest-name {
+  position: absolute;
+  top: 56%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.landing-content {
+  position: absolute;
+  /* Adjust this percentage to perfectly align vertically with the pink pill box in your image */
+  top: 63%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-btn {
+  font-family: var(--font-secondary);
+  font-size: min(3vw, 14px);
+  padding: min(2vw, 10px) min(6vw, 30px);
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: min(0.4vw, 2px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.open-btn:active {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fade-in {
+  display: flex !important;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
